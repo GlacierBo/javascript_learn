@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.slim.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.8/vue.js"></script>
+	<title>vue demo</title>
+</head>
+<body>
+
+<div id="app">
+	<p>{{ site }}</p>
+</div>
+
+<script type="text/javascript">
+	var vm = new Vue({
+		el: '#app',
+		data: {
+			name: 'Google',
+			url: 'http://www.google.com'
+		},
+		computed: {
+			site: {
+				//get
+				get: function() {
+					return this.name + ' ' + this.url
+				},
+				//set
+				set: function(newValue) {
+					var names = newValue.split(' ')
+					this.name = names[0]
+					this.url = names[1]
+				}
+			}
+		}
+	})
+
+	//开始调用
+	vm.site = 'glacier http://www.glacier.market'
+	document.write('name: ' + vm.name);
+	document.write('<br>');
+	document.write('url: ' + vm.url);
+
+</script>
+
+</body>
+</html>
+
+

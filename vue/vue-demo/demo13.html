@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.slim.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.8/vue.js"></script>
+	<title>vue 自定义事件</title>
+</head>
+<body>
+
+
+<div id="app">
+	<div id="counter-event-example">
+		<p>{{ total }}</p>
+		<button-counter @increment="incrementTotal"></button-counter>
+		<button-counter @increment="incrementTotal"></button-counter>
+	</div>
+</div>
+
+<script type="text/javascript">
+	Vue.component('button-counter',{
+		template: '<button v-on:click="increment">{{ counter }}</button>',
+		data: function(){
+			return {
+				counter: 0
+			}
+		},
+		methods: {
+			increment: function(){
+				this.counter += 1
+				this.$emit('increment')
+			}
+		},
+	})
+
+	new Vue({
+		el: '#counter-event-example',
+		data: {
+			total: 0
+		},
+		methods: {
+			incrementTotal: function(){
+				this.total += 1
+			}
+		}
+	})
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.slim.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.8/vue.js"></script>
+	<title>vue 自定义组件3</title>
+</head>
+<body>
+
+
+<div id="app">
+	<child message="hello!"></child>
+</div>
+
+<script type="text/javascript">
+
+//注册
+Vue.component('child', {
+	//声明
+	props: ['message'],
+	//同样也可以再vm实例中像 "this.message"这样使用
+	template: '<span>{{ message }}</span>'
+})
+
+// 创建根实例
+new Vue({
+	el: "#app"
+})
+</script>
+
+</body>
+</html>
