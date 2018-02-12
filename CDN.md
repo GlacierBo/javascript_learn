@@ -1,4 +1,4 @@
-JavaScrpt CDN
+##### JavaScript CDN
 
 ``` html
 <!--Animate-->
@@ -12,5 +12,14 @@ JavaScrpt CDN
 <script src="https://cdn.bootcss.com/fullPage.js/2.9.5/jquery.fullpage.min.js"></script>
 <link href="https://cdn.bootcss.com/fullPage.js/2.9.5/jquery.fullpage.min.css" rel="stylesheet">
 <script src="http://cdn.staticfile.org/jquery-easing/1.3/jquery.easing.min.js"></script>
+```
+
+#### 常用js（需要jquery）
+
+``` shell
+# js生成二维码
+qrcode
+# 滚屏插件
+fullpage
 ```
 
