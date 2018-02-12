@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link href="https://cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+		<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://cdn.bootcss.com/layer/3.1.0/layer.js"></script>
+		<!--滚屏插件-->
+		<link href="https://cdn.bootcss.com/fullPage.js/2.9.5/jquery.fullpage.min.css" rel="stylesheet">
+		<script src="https://cdn.bootcss.com/fullPage.js/2.9.5/jquery.fullpage.min.js"></script>
+		<script src="https://cdn.bootcss.com/jquery-easing/1.4.1/jquery.easing.js"></script>
+		<script src="js/scrolloverflow.min.js" type="text/javascript" charset="utf-8"></script>
+		
+		<title>2017 年度报表</title>
+		
+		<style type="text/css">
+			body{
+				margin: 0;
+				padding: 0;
+			}
+			.container{
+				height: 100%;
+				max-width: 710px;
+				margin: 0 auto;
+			}
+		</style>
+		
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$('#fullpage').fullpage({
+					sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', '#f90'],
+					anchors: ['page1', 'page2', 'page3', 'page4'],
+					afterLoad: function(anchorLink, index){
+						console.log("afterLoad:",index)
+						$('.section1').find('h1').addClass('animated fadeIn');
+						
+						$('.section1').find('h2').addClass('animated fadeIn');
+						
+						
+					},
+					onLeave: function(anchorLink, index){
+						console.log("onLeave:",index)
+						$('.section1').find('h1').removeClass('animated fadeIn');
+					}
+				});
+				
+				
+			});
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<div id="fullpage">
+				<div class="section section1">
+					<h1>Some section1</h1>
+					<h2>Some section1</h2>
+				</div>
+				<div class="section section2">Some section2</div>
+				<div class="section section3">Some section3</div>
+				<div class="section section4">Some section4</div>
+			</div>
+		</div>
+	</body>
+</html>
