@@ -21,5 +21,7 @@
 qrcode
 # 滚屏插件
 fullpage
+# 图片插件
+PhotoSwipe
 ```
 
