@@ -1,36 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.slim.js"></script>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.8/vue.js"></script>
-	<title>vue demo</title>
-</head>
-<body>
-
-<div id="app">
-	<button @click = "greet">Greet</button>
-	<input type="" name="" @keyup.enter="submit">
-</div>
-
-<script type="text/javascript">
-	var vm = new Vue({
-		el: '#app',
-		data: {
-			name: 'Glacier'
-		},
-		methods:{
-			greet: function(event){
-				console.log('Hello ' + this.name + '!');
-				if (event) {
-					console.log(event.target.tagName)
-				}
-			}
-		}
-	})
-
-	vm.greet()
-</script>
-
-</body>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id='app' >
+			<banlance></banlance>
+		</div>
+		
+		<script src="https://cdn.bootcss.com/vue/2.5.13/vue.js"></script>
+		<script src="js/balance.js" ></script>
+	</body>
 </html>

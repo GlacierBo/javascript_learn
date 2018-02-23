@@ -1,33 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.slim.js"></script>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.8/vue.js"></script>
-	<title>vue 双向数据绑定</title>
-</head>
-<body>
-
-<div id="app">
-	<p>input :</p>
-	<input v-model="message" placeholder="编辑我..." type="text">
-	<p>消息是：{{ message }}</p>
-
-	<p> textarea :</p>
-	<p style="white-space: pre;">{{ message2 }}</p>
-	<textarea v-model="message2" placeholder="多行文本输入..."></textarea>
-</div>
-
-
-<script type="text/javascript">
-	var vm = new Vue({
-		el: '#app',
-		data: {
-			message: 'Glacier',
-			message2: 'glacier\rhttp://www.glaicer.market'
-		}
-	})
-</script>
-
-</body>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>过滤器</title>
+	</head>
+	<body>
+		<div id='app'>
+			<input type="text" v-model="price" />
+			{{ price | currency}}
+		</div>
+		
+		<script src="https://cdn.bootcss.com/vue/2.5.13/vue.js"></script>
+		<script src="js/currency.js" ></script>
+	</body>
 </html>

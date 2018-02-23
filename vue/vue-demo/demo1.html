@@ -1,36 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.slim.js"></script>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.8/vue.js"></script>
-	<title>vue demo</title>
-</head>
-<body>
-
-<div id="app">
-	<p>原始：{{ message }}</p>
-	<p>计算翻转：{{ reversedMessage }}</p>
-</div>
-
-<script type="text/javascript">
-	var vm = new Vue({
-		el:'#app',
-		data:{
-			message:'Glacier!'
-		},
-		computed:{
-			//计算属性
-			reversedMessage: function(){
-				return this.message.split('').reverse().join('')
-			}
-		}
-
-	})
-</script>
-
-
-</body>
+<html lang="zh-cn">
+	<head>
+		<meta charset="utf-8" />
+		<title>demo1</title>
+	</head>
+	<body>
+		<div id='app'>
+			<input type="text" v-model="name"/>
+			<span v-if="name">你的名字是: {{ name }}</span>
+		</div>
+		
+		<script src="https://cdn.bootcss.com/vue/2.5.13/vue.js"></script>
+		<script src="js/main.js"></script>
+	</body>
 </html>
-
-
