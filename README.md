@@ -26,6 +26,8 @@ fullpage
 # 图片插件
 PhotoSwipe
 ```
+[ES6](https://github.com/GlacierBo/javascript_learn/blob/master/javascript/ES6.md)
+
 [CSS3备忘](https://github.com/GlacierBo/javascript_learn/tree/master/css)
 
 [原生JavaScript](https://github.com/GlacierBo/javascript_learn/blob/master/javascript/JavaScript_00.md)
