@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>BootStrap</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/main.css"/>
+		<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+	</head>
+	<body>	
+			<div class="navbar navbar-default">
+				<div class="container">
+					<div class="navbar-header">
+					<a href="#" class="navbar-brand">栓蛋网</a>
+					</div>
+					<ul class="nav navbar-nav navbar-left">
+						<li><a href="#">首页</a></li>
+						<li><a href="#">产品</a></li>
+						<li><a href="#">联系我们</a></li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#" @click="getTest()">登录</a></li>
+						<li><a href="#" @click="say('注册')">注册</a></li>
+					</ul>
+				</div>
+			</div>
+		
+			<div class="container">
+				<div class="content">
+					<p class="lead">
+					Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.
+					</p>
+				</div>
+			</div>
+			
+			<div class="container">
+				
+				<div class="col-md-4 row">
+					<div class="panel">
+					<div class="panel-heading">用户统计</div>
+						<div class="panel-body">
+							If I ask you about women, you'll probably give me a syllabus of your personal favorites. 
+							You may have even been laid a few times. 
+							But you can't tell me what it feels like to wake up next to a woman and feel truly happy. 
+						</div>
+						<div class="panel-footer">
+							<div class="small text-muted">
+								数据更新于5秒前
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-md-4 row">
+					<div class="panel">
+					<div class="panel-heading">用户统计</div>
+						<div class="panel-body">
+							If I ask you about women, you'll probably give me a syllabus of your personal favorites. 
+							You may have even been laid a few times. 
+							But you can't tell me what it feels like to wake up next to a woman and feel truly happy. 
+						</div>
+						<div class="panel-footer">
+							<div class="small text-muted">
+								数据更新于5秒前
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-md-4 row">
+					<div class="panel">
+					<div class="panel-heading">用户统计</div>
+						<div class="panel-body">
+							If I ask you about women, you'll probably give me a syllabus of your personal favorites. 
+							You may have even been laid a few times. 
+							But you can't tell me what it feels like to wake up next to a woman and feel truly happy. 
+						</div>
+						<div class="panel-footer">
+							<div class="small text-muted">
+								数据更新于5秒前
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+			
+			
+			<script type="text/javascript">
+				$(".panel").each(function(){
+					var num = Math.random() * 10 % 4
+					switch(num.toFixed(0)){
+						case '0': $(this).addClass('panel-danger');  break;
+						case '1': $(this).addClass('panel-default'); break;
+						case '2': $(this).addClass('panel-success'); break;
+						case '3': $(this).addClass('panel-primary'); break;
+						case '4': $(this).addClass('panel-warning'); break;
+					}
+				})
+			</script>
+		
+			<div class="footer">
+				<span>Copyright &copy; 2017-2018  <a href="https://glacierbo.github.io/">glacier</a>
+				</span>
+			</div>
+		
+	</body>
+</html>
